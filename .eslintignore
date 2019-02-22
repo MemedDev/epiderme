@@ -1,0 +1,5 @@
+**/node_modules/
+**/dist/
+*.less
+jest.config.js
+**/config/

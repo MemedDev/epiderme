@@ -1,0 +1,22 @@
+.button {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: @primary-color;
+  color: white;
+  border: 0;
+  border-radius: 4px;
+  box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s ease;
+
+  &:hover,
+  &:focus {
+    box-shadow:
+      0 1px 5px 0 rgba(0, 0, 0, 0.2),
+      0 2px 8px 0 rgba(0, 0, 0, 0.22);
+  }
+
+  &--is-danger {
+    background-color: red;
+  }
+}
