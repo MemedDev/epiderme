@@ -12,10 +12,9 @@
     "build": "cross-env NODE_ENV=production rollup -c",
     "prebuild": "rimraf dist",
     "commit": "git-cz",
-    "dev": "cross-env NODE_ENV=development rollup -c -w",
     "lint": "eslint",
-    "test": "jest -c",
-    "test:watch": "npm run test -- --watch",
+    "test": "jest -c --coverage",
+    "test:watch": "jest -c --watch",
     "storybook": "start-storybook -p 9001 -c .storybook",
     "prepublisOnly": "npm run build",
     "semantic-release": "semantic-release"

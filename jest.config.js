@@ -1,9 +1,18 @@
 module.exports = {
   clearMocks: true,
   collectCoverageFrom: [
-    'src/**/*.{js,jsx}'
+    'src/**/*.{js,jsx}',
+    '!src/stories/**/*'
   ],
   coverageDirectory: "coverage",
+  coverageThreshold: {
+    global: {
+      statements: 100,
+      branches: 100,
+      functions: 100,
+      lines: 100
+    }
+  },
   moduleFileExtensions: [
     "js",
     "json",
