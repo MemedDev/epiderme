@@ -16,8 +16,7 @@
     "test": "jest -c --coverage",
     "test:watch": "jest -c --watch",
     "storybook": "start-storybook -p 9001 -c .storybook",
-    "prepublisOnly": "npm run build",
-    "semantic-release": "semantic-release"
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "keywords": [
     "react",
