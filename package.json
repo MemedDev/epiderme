@@ -89,5 +89,9 @@
   },
   "czConfig": {
     "path": "node_modules/cz-conventional-changelog"
+  },
+  "engines": {
+    "node": ">= 6",
+    "npm": ">= 3"
   }
 }
