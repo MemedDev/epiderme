@@ -13,10 +13,11 @@
     "prebuild": "rimraf dist",
     "commit": "git-cz",
     "lint": "eslint",
+    "report-coverage": "codecov",
     "test": "jest -c --coverage",
     "test:watch": "jest -c --watch",
     "storybook": "start-storybook -p 9001 -c .storybook",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+    "semantic-release": "semantic-release"
   },
   "keywords": [
     "react",
@@ -48,6 +49,7 @@
     "babel-jest": "^24.1.0",
     "babel-loader": "^8.0.5",
     "babel-plugin-dynamic-import-node": "^2.2.0",
+    "codecov": "3.2.0",
     "commitizen": "3.0.7",
     "cross-env": "^5.2.0",
     "cz-conventional-changelog": "2.1.0",
