@@ -27,6 +27,7 @@ Component.propTypes = {
   color: PropTypes.oneOf([
     'default',
     'primary',
+    'secondary',
     'success',
     'danger',
     'warning',

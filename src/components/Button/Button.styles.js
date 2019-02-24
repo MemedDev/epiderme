@@ -6,9 +6,12 @@ const buttonTextColor = color => (
 
 const Button = styled.button`
   display: inline-block;
-  padding: 14px;
+  min-width: 80px;
+  padding: 16px;
   border-radius: 5px;
+  font-size: 14px;
   font-weight: bold;
+  letter-spacing: 1px;
   text-transform: uppercase;
   border: none;
   outline: none;
@@ -32,7 +35,8 @@ const Button = styled.button`
 Button.defaultProps = {
   theme: {
     default: '#ddd',
-    primary: '#0074D9',
+    primary: '#00BCEB',
+    secondary: '#00d39c',
     success: '#2ECC40',
     danger: '#FF4136',
     warning: '#FFDC00',

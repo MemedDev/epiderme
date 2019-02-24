@@ -3,6 +3,7 @@ module.exports = {
   collectCoverageFrom: [
     'src/**/*.{js,jsx}',
     '!src/**/*.styles.js',
+    '!src/**/*.stories.js',
     '!src/stories/**/*'
   ],
   coverageDirectory: "coverage",

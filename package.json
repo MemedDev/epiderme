@@ -16,12 +16,15 @@
     "test": "jest -c --coverage",
     "test:watch": "jest -c --watch",
     "storybook": "start-storybook -p 9001 -c .storybook",
+    "storybook:build": "build-storybook -c .storybook -o docs",
+    "gh-pages": "gh-pages -d docs",
     "semantic-release": "semantic-release"
   },
   "keywords": [
     "react",
     "components"
   ],
+  "homepage": "https://memeddev.github.io/epiderme",
   "repository": {
     "type": "git",
     "url": "https://github.com/MemedDev/epiderme"
@@ -43,6 +46,12 @@
     "@babel/preset-env": "^7.3.1",
     "@babel/preset-react": "^7.0.0",
     "@babel/preset-stage-1": "^7.0.0",
+    "@storybook/addon-actions": "4.1.13",
+    "@storybook/addon-info": "4.1.13",
+    "@storybook/addon-knobs": "4.1.13",
+    "@storybook/addon-links": "4.1.13",
+    "@storybook/addon-notes": "4.1.13",
+    "@storybook/addons": "4.1.13",
     "@storybook/react": "^4.1.13",
     "babel-eslint": "^10.0.1",
     "babel-jest": "^24.1.0",
@@ -60,6 +69,7 @@
     "eslint-plugin-import": "^2.16.0",
     "eslint-plugin-jsx-a11y": "^6.2.1",
     "eslint-plugin-react": "^7.12.4",
+    "gh-pages": "2.0.1",
     "husky": "1.3.1",
     "jest": "^24.1.0",
     "jest-pnp-resolver": "^1.1.0",
@@ -75,6 +85,7 @@
     "rollup-plugin-node-resolve": "^4.0.0",
     "rollup-plugin-peer-deps-external": "2.2.0",
     "semantic-release": "^15.13.3",
+    "storybook-addon-jsx": "6.0.0",
     "styled-components": "4.1.3"
   },
   "husky": {
