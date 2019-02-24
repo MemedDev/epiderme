@@ -1,81 +1,52 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
 
-function createCommonjsModule(fn, module) {
-	return module = { exports: {} }, fn(module, module.exports), module.exports;
+function _taggedTemplateLiteral(strings, raw) {
+  if (!raw) {
+    raw = strings.slice(0);
+  }
+
+  return Object.freeze(Object.defineProperties(strings, {
+    raw: {
+      value: Object.freeze(raw)
+    }
+  }));
 }
 
-var classnames = createCommonjsModule(function (module) {
-/*!
-  Copyright (c) 2017 Jed Watson.
-  Licensed under the MIT License (MIT), see
-  http://jedwatson.github.io/classnames
-*/
-/* global define */
+function _templateObject() {
+  var data = _taggedTemplateLiteral(["\n  padding: 10px;\n  color: ", ";\n  border: 2px solid ", ";\n  border-radius: 4px;\n"]);
 
-(function () {
+  _templateObject = function _templateObject() {
+    return data;
+  };
 
-	var hasOwn = {}.hasOwnProperty;
-
-	function classNames () {
-		var classes = [];
-
-		for (var i = 0; i < arguments.length; i++) {
-			var arg = arguments[i];
-			if (!arg) continue;
-
-			var argType = typeof arg;
-
-			if (argType === 'string' || argType === 'number') {
-				classes.push(arg);
-			} else if (Array.isArray(arg) && arg.length) {
-				var inner = classNames.apply(null, arg);
-				if (inner) {
-					classes.push(inner);
-				}
-			} else if (argType === 'object') {
-				for (var key in arg) {
-					if (hasOwn.call(arg, key) && arg[key]) {
-						classes.push(key);
-					}
-				}
-			}
-		}
-
-		return classes.join(' ');
-	}
-
-	if (module.exports) {
-		classNames.default = classNames;
-		module.exports = classNames;
-	} else {
-		window.classNames = classNames;
-	}
-}());
+  return data;
+}
+var Button = styled.button(_templateObject(), function (props) {
+  return props.theme.primary;
+}, function (props) {
+  return props.theme.primary;
 });
+Button.defaultProps = {
+  theme: {
+    primary: '#0074D9'
+  }
+};
 
-var Button = function Button(_ref) {
-  var children = _ref.children,
-      isDanger = _ref.isDanger;
-  var buttonClass = classnames('button', {
-    'button--is-danger': isDanger
-  });
-  return React.createElement("button", {
-    type: "button",
-    className: buttonClass
+var Component = function Component(_ref) {
+  var children = _ref.children;
+  return React.createElement(Button, {
+    type: "button"
   }, children);
 };
 
-Button.defaultProps = {
-  isDanger: false
-};
-Button.propTypes = {
-  children: PropTypes.node.isRequired,
-  isDanger: PropTypes.bool
+Component.propTypes = {
+  children: PropTypes.node.isRequired
 };
 
 var main = {
-  Button: Button
+  Button: Component
 };
 
 export default main;

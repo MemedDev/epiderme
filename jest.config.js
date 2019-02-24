@@ -2,6 +2,7 @@ module.exports = {
   clearMocks: true,
   collectCoverageFrom: [
     'src/**/*.{js,jsx}',
+    '!src/**/*.styles.js',
     '!src/stories/**/*'
   ],
   coverageDirectory: "coverage",

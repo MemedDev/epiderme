@@ -23,6 +23,7 @@ module.exports = {
     'react',
   ],
   rules: {
+    'import/prefer-default-export': 'off',
     'import/no-extraneous-dependencies': [
       'error',
       {
@@ -38,5 +39,6 @@ module.exports = {
       }
     ],
     'react/jsx-filename-extension': 'off',
+    'react/forbid-prop-types': 'warn',
   },
 };

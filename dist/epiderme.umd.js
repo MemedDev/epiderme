@@ -1,89 +1,60 @@
 (function (global, factory) {
-	typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('react'), require('prop-types')) :
-	typeof define === 'function' && define.amd ? define(['react', 'prop-types'], factory) :
-	(global = global || self, global.ReactEpiderme = factory(global.React, global.PropTypes));
-}(this, function (React, PropTypes) { 'use strict';
+  typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('react'), require('prop-types'), require('styled-components')) :
+  typeof define === 'function' && define.amd ? define(['react', 'prop-types', 'styled-components'], factory) :
+  (global = global || self, global.Epiderme = factory(global.React, global.PropTypes, global.styled));
+}(this, function (React, PropTypes, styled) { 'use strict';
 
-	React = React && React.hasOwnProperty('default') ? React['default'] : React;
-	PropTypes = PropTypes && PropTypes.hasOwnProperty('default') ? PropTypes['default'] : PropTypes;
+  React = React && React.hasOwnProperty('default') ? React['default'] : React;
+  PropTypes = PropTypes && PropTypes.hasOwnProperty('default') ? PropTypes['default'] : PropTypes;
+  styled = styled && styled.hasOwnProperty('default') ? styled['default'] : styled;
 
-	function createCommonjsModule(fn, module) {
-		return module = { exports: {} }, fn(module, module.exports), module.exports;
-	}
+  function _taggedTemplateLiteral(strings, raw) {
+    if (!raw) {
+      raw = strings.slice(0);
+    }
 
-	var classnames = createCommonjsModule(function (module) {
-	/*!
-	  Copyright (c) 2017 Jed Watson.
-	  Licensed under the MIT License (MIT), see
-	  http://jedwatson.github.io/classnames
-	*/
-	/* global define */
+    return Object.freeze(Object.defineProperties(strings, {
+      raw: {
+        value: Object.freeze(raw)
+      }
+    }));
+  }
 
-	(function () {
+  function _templateObject() {
+    var data = _taggedTemplateLiteral(["\n  padding: 10px;\n  color: ", ";\n  border: 2px solid ", ";\n  border-radius: 4px;\n"]);
 
-		var hasOwn = {}.hasOwnProperty;
+    _templateObject = function _templateObject() {
+      return data;
+    };
 
-		function classNames () {
-			var classes = [];
+    return data;
+  }
+  var Button = styled.button(_templateObject(), function (props) {
+    return props.theme.primary;
+  }, function (props) {
+    return props.theme.primary;
+  });
+  Button.defaultProps = {
+    theme: {
+      primary: '#0074D9'
+    }
+  };
 
-			for (var i = 0; i < arguments.length; i++) {
-				var arg = arguments[i];
-				if (!arg) continue;
+  var Component = function Component(_ref) {
+    var children = _ref.children;
+    return React.createElement(Button, {
+      type: "button"
+    }, children);
+  };
 
-				var argType = typeof arg;
+  Component.propTypes = {
+    children: PropTypes.node.isRequired
+  };
 
-				if (argType === 'string' || argType === 'number') {
-					classes.push(arg);
-				} else if (Array.isArray(arg) && arg.length) {
-					var inner = classNames.apply(null, arg);
-					if (inner) {
-						classes.push(inner);
-					}
-				} else if (argType === 'object') {
-					for (var key in arg) {
-						if (hasOwn.call(arg, key) && arg[key]) {
-							classes.push(key);
-						}
-					}
-				}
-			}
+  var main = {
+    Button: Component
+  };
 
-			return classes.join(' ');
-		}
-
-		if (module.exports) {
-			classNames.default = classNames;
-			module.exports = classNames;
-		} else {
-			window.classNames = classNames;
-		}
-	}());
-	});
-
-	var Button = function Button(_ref) {
-	  var children = _ref.children,
-	      isDanger = _ref.isDanger;
-	  var buttonClass = classnames('button', {
-	    'button--is-danger': isDanger
-	  });
-	  return React.createElement("button", {
-	    type: "button",
-	    className: buttonClass
-	  }, children);
-	};
-
-	Button.defaultProps = {
-	  isDanger: false
-	};
-	Button.propTypes = {
-	  children: PropTypes.node.isRequired,
-	  isDanger: PropTypes.bool
-	};
-
-	var main = {
-	  Button: Button
-	};
-
-	return main;
+  return main;
 
 }));
