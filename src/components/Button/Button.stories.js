@@ -4,7 +4,7 @@ import { storiesOf } from '@storybook/react';
 import { text, select } from '@storybook/addon-knobs';
 
 import Button from './index';
-import markdown from './Button.md';
+import markdown from './README.md';
 
 const getColorSelectKnob = () => {
   const label = 'color';
@@ -36,7 +36,7 @@ stories.addWithJSX(
     const { label, options, defaultValue } = getColorSelectKnob();
     const selectedColor = select(label, options, defaultValue);
 
-    return <Button color={selectedColor}>{text('Text', 'Button')}</Button>;
+    return <Button type="button" color={selectedColor}>{text('Text', 'Button')}</Button>;
   },
   { notes: { markdown } },
 );

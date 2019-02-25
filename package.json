@@ -15,9 +15,9 @@
     "report-coverage": "codecov",
     "test": "jest -c --coverage",
     "test:watch": "jest -c --watch",
-    "storybook": "start-storybook -p 9001 -c .storybook",
-    "storybook:build": "build-storybook -c .storybook -o docs",
-    "gh-pages": "gh-pages -d docs",
+    "dev": "start-storybook -p 9001 -c .storybook",
+    "docs:build": "build-storybook -c .storybook -o docs",
+    "docs:publish": "gh-pages -d docs",
     "semantic-release": "semantic-release"
   },
   "keywords": [
@@ -74,7 +74,7 @@
     "jest": "^24.1.0",
     "jest-pnp-resolver": "^1.1.0",
     "prop-types": "^15.7.2",
-    "react": "^16.8.3",
+    "react": "16.8.3",
     "react-app-polyfill": "^0.2.1",
     "react-dom": "^16.8.3",
     "rimraf": "2.6.3",
