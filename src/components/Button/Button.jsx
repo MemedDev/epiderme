@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { Button } from './Button.styles';
+import StyledButton from './styles';
 
-const Component = (props) => {
+const Button = (props) => {
   const {
     children,
     color,
@@ -11,20 +11,20 @@ const Component = (props) => {
   } = props;
 
   return (
-    <Button
+    <StyledButton
       color={color}
       {...attributes}
     >
       {children}
-    </Button>
+    </StyledButton>
   );
 };
 
-Component.defaultProps = {
+Button.defaultProps = {
   color: 'default',
 };
 
-Component.propTypes = {
+Button.propTypes = {
   children: PropTypes.node.isRequired,
   color: PropTypes.oneOf([
     'default',
@@ -37,4 +37,4 @@ Component.propTypes = {
   ]),
 };
 
-export default Component;
+export default Button;

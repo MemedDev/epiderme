@@ -1,7 +1,7 @@
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
 import { storiesOf } from '@storybook/react';
-import { text, select } from '@storybook/addon-knobs';
+import { text, select, boolean } from '@storybook/addon-knobs';
 
 import Button from './index';
 import markdown from './README.md';
@@ -24,19 +24,21 @@ const getColorSelectKnob = () => {
 
 const stories = storiesOf('Button', module);
 
-stories.addParameters({
-  info: {
-    text: 'Testing info',
-  },
-});
-
 stories.addWithJSX(
   'with text',
   () => {
     const { label, options, defaultValue } = getColorSelectKnob();
     const selectedColor = select(label, options, defaultValue);
 
-    return <Button type="button" color={selectedColor}>{text('Text', 'Button')}</Button>;
+    return (
+      <Button
+        type="button"
+        color={selectedColor}
+        disabled={boolean('Disabled', false)}
+      >
+        {text('Text', 'Button')}
+      </Button>
+    );
   },
   { notes: { markdown } },
 );

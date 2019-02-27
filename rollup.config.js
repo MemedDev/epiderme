@@ -37,7 +37,9 @@ export default {
     babel({
       exclude: 'node_modules/**',
     }),
-    resolve(),
+    resolve({
+      extensions: ['.js', '.jsx'],
+    }),
     commonjs(),
   ],
 };

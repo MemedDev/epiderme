@@ -17,8 +17,8 @@ addParameters({
   },
 });
 
-addDecorator(withNotes);
 addDecorator(withKnobs);
+addDecorator(withNotes);
 addDecorator(withInfo);
 setAddon(JSXAddon);
 
