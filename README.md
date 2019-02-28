@@ -46,3 +46,5 @@ const App = (props) => (
 
 export default App;
 ```
+
+To see more components, check out our [StoryBook](https://memeddev.github.io/epiderme)
