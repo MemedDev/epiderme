@@ -4,7 +4,7 @@ import babel from 'rollup-plugin-babel';
 import { eslint } from 'rollup-plugin-eslint';
 import peerDepsExternal from 'rollup-plugin-peer-deps-external';
 
-import pkg from './package.json';
+import pkg from '../package.json';
 
 export default {
   input: 'src/main.js',

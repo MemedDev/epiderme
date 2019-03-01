@@ -28,8 +28,8 @@ module.exports = {
   testEnvironment: 'jsdom',
   transform: {
     '^.+\\.(js|jsx)$': '<rootDir>/node_modules/babel-jest',
-    '^.+\\.(css|less)$': '<rootDir>/config/jest/cssTransform.js',
-    '^(?!.*\\.(js|jsx|css|less|json)$)': '<rootDir>/config/jest/fileTransform.js',
+    '^.+\\.(css|less)$': '<rootDir>/test/cssTransform.js',
+    '^(?!.*\\.(js|jsx|css|less|json)$)': '<rootDir>/test/fileTransform.js',
   },
   transformIgnorePatterns: [
     '[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$',

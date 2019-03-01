@@ -8,7 +8,7 @@
     "dist"
   ],
   "scripts": {
-    "build": "cross-env NODE_ENV=production rollup -c",
+    "build": "cross-env NODE_ENV=production rollup --config ./build/rollup.config.js",
     "prebuild": "rimraf dist",
     "lint": "eslint",
     "report-coverage": "codecov",
@@ -94,5 +94,8 @@
   "engines": {
     "node": ">= 6",
     "npm": ">= 3"
+  },
+  "dependencies": {
+    "deepmerge": "3.2.0"
   }
 }

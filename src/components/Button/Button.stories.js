@@ -4,6 +4,7 @@ import { storiesOf } from '@storybook/react';
 import { text, select, boolean } from '@storybook/addon-knobs';
 
 import Button from './index';
+import createTheme from '../../styles/theme';
 import markdown from './README.md';
 
 const getColorSelectKnob = () => {
@@ -11,11 +12,7 @@ const getColorSelectKnob = () => {
   const options = {
     default: 'default',
     primary: 'primary',
-    secondary: 'secondary',
-    success: 'success',
-    danger: 'danger',
-    warning: 'warning',
-    info: 'info',
+    accent: 'accent',
   };
   const defaultValue = 'primary';
 
@@ -24,45 +21,59 @@ const getColorSelectKnob = () => {
 
 const stories = storiesOf('Button', module);
 
-stories.addWithJSX(
+stories.add(
   'with text',
   () => {
     const { label, options, defaultValue } = getColorSelectKnob();
     const selectedColor = select(label, options, defaultValue);
 
+    const theme = createTheme();
+    console.log('teste', theme);
+
     return (
-      <Button
-        type="button"
-        color={selectedColor}
-        disabled={boolean('Disabled', false)}
-      >
-        {text('Text', 'Button')}
-      </Button>
+      <ThemeProvider theme={theme}>
+        <Button
+          type="button"
+          variant={selectedColor}
+          disabled={boolean('Disabled', false)}
+        >
+          {text('Text', 'Button')}
+        </Button>
+      </ThemeProvider>
     );
   },
   { notes: { markdown } },
 );
 
-stories.addWithJSX('with some emoji', () => (
-  <Button><span role="img" aria-label="so cool">😀 😎 👍 💯</span></Button>
-));
-
-stories.addWithJSX('with BP theme', () => {
-  const bp = {
-    default: '#aaa',
-    primary: '#6152A4',
-    secondary: '#EF7052',
-    success: 'green',
-    danger: 'red',
-    warning: 'orange',
-    info: 'blue',
+stories.add('with custom theme', () => {
+  const custom = {
+    palette: {
+      default: {
+        main: '#aaa',
+        lighten: '#aaa',
+        darken: '#aaa',
+        text: 'black',
+      },
+      primary: {
+        main: '#6152A4',
+        lighten: '#6152A4',
+        darken: '#6152A4',
+        text: 'white',
+      },
+      accent: {
+        main: '#EF7052',
+        lighten: '#EF7052',
+        darken: '#EF7052',
+        text: 'white',
+      },
+    },
   };
   const { label, options, defaultValue } = getColorSelectKnob();
   const selectedColor = select(label, options, defaultValue);
 
   return (
-    <ThemeProvider theme={bp}>
-      <Button color={selectedColor}>{text('Text', 'Button')}</Button>
+    <ThemeProvider theme={createTheme(custom)}>
+      <Button variant={selectedColor}>{text('Text', 'Button')}</Button>
     </ThemeProvider>
   );
 });
