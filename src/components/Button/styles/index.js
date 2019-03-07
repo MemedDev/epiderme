@@ -8,7 +8,7 @@ const Button = styled.button`
   padding: 0 ${({ theme }) => theme.unit.space2}px;
   outline: none;
   border: none;
-  border-radius: ${({ theme }) => theme.borderRadius.default};
+  border-radius: ${({ theme }) => theme.borderRadius.default}px;
   cursor: pointer;
   user-select: none;
   -webkit-tap-highlight-color: transparent;

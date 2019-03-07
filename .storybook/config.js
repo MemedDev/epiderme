@@ -1,18 +1,20 @@
 import { configure, addParameters, addDecorator, setAddon } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs';
+import { withOptions } from '@storybook/addon-options';
 
-addParameters({
-  options: {
+addDecorator(
+  withOptions({
     name: 'Memed - Epiderme',
     url: 'https://github.com/MemedDev/epiderme',
     goFullScreen: false,
     showAddonsPanel: true,
-    showSearchBox: true,
+    sidebarAnimations: true,
+    showSearchBox: false,
     addonPanelInRight: true,
     sortStoriesByKind: false,
     enableShortcuts: true,
-  },
-});
+  })
+);
 
 addDecorator(withKnobs);
 
