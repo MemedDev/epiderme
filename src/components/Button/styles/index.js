@@ -1,39 +1,56 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 const Button = styled.button`
   display: inline-block;
-  min-width: 80px;
-  padding: ${({ theme }) => theme.unit.space2}px;
-  border-radius: ${({ theme }) => theme.borderRadius.default}px;
-  border: none;
+  vertical-align: middle;
+  height: 32px;
+  line-height: 32px;
+  padding: 0 ${({ theme }) => theme.unit.space2}px;
   outline: none;
-  font-weight: bold;
-  letter-spacing: 1px;
-  text-transform: uppercase;
+  border: none;
+  border-radius: ${({ theme }) => theme.borderRadius.default};
   cursor: pointer;
-  transition: 0.3s ease;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
 
-  color: ${({ theme, variant }) => theme.palette[variant].text};
-  background-color: ${({ theme, variant }) => theme.palette[variant].main};
+  font-family: ${({ theme }) => theme.typography.fontFamily};
+  font-size: ${({ theme }) => theme.typography.button.fontSize};
+  font-weight: ${({ theme }) => theme.typography.button.fontWeight};
+  letter-spacing: ${({ theme }) => theme.typography.button.letterSpacing};
+  text-transform: ${({ theme }) => theme.typography.button.textTransform};
+  text-align: center;
+  text-decoration: none;
 
-  &:hover,
-  &:focus {
-    background-color: ${({ theme, variant }) => theme.palette[variant].darken};
-    box-shadow: ${({ theme }) => theme.shadows[1]};
-  }
+  ${props => props.aspect === 'button' && css`
+    color: ${props.theme.palette[props.color].text};
+    background-color: ${props.theme.palette[props.color].main};
+
+    &:hover,
+    &:focus {
+      background-color: ${props.theme.palette[props.color].darken};
+    }
+  `}
+
+  ${props => props.aspect === 'link' && css`
+    color: ${props.theme.palette.accent.main};
+    background-color: transparent;
+
+    &:active {
+      background-color: ${props.theme.palette.black.black12};
+    }
+  `}
 
   &:disabled {
-    cursor: not-allowed;
-    opacity: 0.7;
+    color: ${({ theme }) => theme.palette.default.text};
     background-color: ${({ theme }) => theme.palette.default.main};
     box-shadow: none;
     border: none;
-    color: ${({ theme }) => theme.palette.default.text};
+    opacity: 0.7;
+    cursor: not-allowed;
   }
 
-  &:first-of-type,
-  & + button {
-    margin-right: 5px;
+  & + & {
+    margin-left: ${({ theme }) => theme.unit.space2}px;
   }
 `;
 

@@ -6,24 +6,40 @@ import StyledButton from './styles';
 const Button = (props) => {
   const {
     children,
+    component,
     ...attributes
   } = props;
 
   return (
-    <StyledButton {...attributes}>{children}</StyledButton>
+    <StyledButton
+      as={component}
+      {...attributes}
+    >
+      {children}
+    </StyledButton>
   );
 };
 
 Button.defaultProps = {
-  variant: 'default',
+  color: 'default',
+  component: 'button',
+  aspect: 'button',
 };
 
 Button.propTypes = {
   children: PropTypes.node.isRequired,
-  variant: PropTypes.oneOf([
+  color: PropTypes.oneOf([
     'default',
     'primary',
     'accent',
+  ]),
+  component: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.element,
+  ]),
+  aspect: PropTypes.oneOf([
+    'button',
+    'link',
   ]),
 };
 

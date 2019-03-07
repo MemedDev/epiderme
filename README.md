@@ -82,16 +82,24 @@ This is how it looks like:
       fontSize: '14px',
       lineHeight: '20px',
       letterSpacing: '-0.1px'
+    },
+    button: {
+      fontSize: '16px',
+      lineHeight: '22px',
+      letterSpacing: '-0.2px',
+      textTransform: 'none',
+      fontWeight: 500
     }
   },
   palette: {
     black: {
-      'default': 'rgb(51, 51, 51)',
-      black50: 'rgb(51, 51, 51, 0.5)',
-      black24: 'rgb(51, 51, 51, 0.24)',
-      black08: 'rgb(51, 51, 51, 0.08)'
+      default: 'rgb(51, 51, 51)',
+      black50: 'rgba(51, 51, 51, 0.5)',
+      black24: 'rgba(51, 51, 51, 0.24)',
+      black12: 'rgba(51, 51, 51, 0.12)',
+      black08: 'rgba(51, 51, 51, 0.08)'
     },
-    'default': {
+    default: {
       main: '#dedede',
       lighten: '#e5e5e5',
       darken: '#d0d0d0',
@@ -133,7 +141,8 @@ This is how it looks like:
 }
 ```
 
-You can pass your custom theme object to the `createTheme` method provided by epiderme to create your own theme.
+You can pass your custom theme object to the `createTheme` function provided by epiderme to create your own theme.
+Your theme will be merged with our default theme, you don't need to override all properties, only those you want to customize.
 
 ```jsx
 // App.js

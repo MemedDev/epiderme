@@ -1,8 +1,5 @@
 import { configure, addParameters, addDecorator, setAddon } from '@storybook/react';
-import { withNotes } from '@storybook/addon-notes';
 import { withKnobs } from '@storybook/addon-knobs';
-import { withInfo } from '@storybook/addon-info';
-import JSXAddon from 'storybook-addon-jsx';
 
 addParameters({
   options: {
@@ -18,9 +15,6 @@ addParameters({
 });
 
 addDecorator(withKnobs);
-addDecorator(withNotes);
-addDecorator(withInfo);
-setAddon(JSXAddon);
 
 function loadStories() {
   require('./welcome.stories');

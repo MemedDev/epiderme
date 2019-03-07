@@ -11,9 +11,10 @@ const baseBlack = 'rgb(51, 51, 51)';
 const basePrimary = '#00BCEB';
 
 export const black = baseBlack;
-export const black50 = 'rgb(51, 51, 51, 0.5)';
-export const black24 = 'rgb(51, 51, 51, 0.24)';
-export const black08 = 'rgb(51, 51, 51, 0.08)';
+export const black50 = 'rgba(51, 51, 51, 0.5)';
+export const black24 = 'rgba(51, 51, 51, 0.24)';
+export const black12 = 'rgba(51, 51, 51, 0.12)';
+export const black08 = 'rgba(51, 51, 51, 0.08)';
 
 export const defaultColor = '#dedede';
 export const defaultColorLighten = '#e5e5e5';

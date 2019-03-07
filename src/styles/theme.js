@@ -4,6 +4,7 @@ import {
   black,
   black50,
   black24,
+  black12,
   black08,
   defaultColor,
   defaultColorLighten,
@@ -38,12 +39,19 @@ const theme = {
       lineHeight: '20px',
       letterSpacing: '-0.1px',
     },
+    button: {
+      fontSize: '16px',
+      letterSpacing: '-0.2px',
+      textTransform: 'none',
+      fontWeight: 500,
+    },
   },
   palette: {
     black: {
       default: black,
       black50,
       black24,
+      black12,
       black08,
     },
     default: {
@@ -83,7 +91,7 @@ const theme = {
     '0 3px 10px 0 rgba(0, 0, 0, 0.08)',
   ],
   borderRadius: {
-    default: 6,
+    default: '6px',
   },
 };
 
