@@ -103,7 +103,8 @@ const theme = {
     '0 3px 10px 0 rgba(0, 0, 0, 0.08)',
   ],
   borderRadius: {
-    default: '6px',
+    default: 6,
+    radius24: 24,
   },
 };
 

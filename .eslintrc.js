@@ -24,6 +24,7 @@ module.exports = {
   ],
   rules: {
     'import/prefer-default-export': 'off',
+    'operator-linebreak': 'off',
     'import/no-extraneous-dependencies': [
       'error',
       {
