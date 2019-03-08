@@ -11,5 +11,12 @@ script:
   - npm run test
   - npm run report-coverage
   - npm run docs:build
-after_success:
-  - npm run docs:publish
+deploy:
+  provider: pages
+  local-dir: docs
+  github-token: $GH_TOKEN
+  skip-cleanup: true
+  keep-history: true
+  verbose: true
+  on:
+    branch: master
