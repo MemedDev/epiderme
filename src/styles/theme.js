@@ -17,6 +17,11 @@ import {
   accentDarken,
   textColor,
   unit,
+  fontWeightLight,
+  fontWeightRegular,
+  fontWeightMedium,
+  fontWeightSemibold,
+  fontWeightBold,
 } from './variables';
 
 const theme = {
@@ -24,11 +29,6 @@ const theme = {
     fontFamily: '"Atcarquette", "Helvetica", "Arial", sans-serif',
     fontSize: '16px',
     color: textColor,
-    subtitle2: {
-      fontSize: '18px',
-      lineHeight: '22px',
-      letterSpacing: '-0.35px',
-    },
     body1: {
       fontSize: '16px',
       lineHeight: '22px',
@@ -39,11 +39,23 @@ const theme = {
       lineHeight: '20px',
       letterSpacing: '-0.1px',
     },
+    subtitle2: {
+      fontSize: '18px',
+      lineHeight: '22px',
+      letterSpacing: '-0.35px',
+    },
     button: {
       fontSize: '16px',
       letterSpacing: '-0.2px',
       textTransform: 'none',
-      fontWeight: 500,
+      fontWeight: fontWeightMedium,
+    },
+    weights: {
+      light: fontWeightLight,
+      regular: fontWeightRegular,
+      medium: fontWeightMedium,
+      semibold: fontWeightSemibold,
+      bold: fontWeightBold,
     },
   },
   palette: {

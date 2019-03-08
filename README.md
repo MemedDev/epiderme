@@ -68,11 +68,6 @@ This is how it looks like:
     fontFamily: '"Atcarquette", "Helvetica", "Arial", sans-serif',
     fontSize: '16px',
     color: 'rgb(51, 51, 51)',
-    subtitle2: {
-      fontSize: '18px',
-      lineHeight: '22px',
-      letterSpacing: '-0.35px'
-    },
     body1: {
       fontSize: '16px',
       lineHeight: '22px',
@@ -83,12 +78,23 @@ This is how it looks like:
       lineHeight: '20px',
       letterSpacing: '-0.1px'
     },
+    subtitle2: {
+      fontSize: '18px',
+      lineHeight: '22px',
+      letterSpacing: '-0.35px'
+    },
     button: {
       fontSize: '16px',
-      lineHeight: '22px',
       letterSpacing: '-0.2px',
       textTransform: 'none',
       fontWeight: 500
+    },
+    weights: {
+      light: 300,
+      regular: 400,
+      medium: 500,
+      semibold: 600,
+      bold: 700
     }
   },
   palette: {
@@ -136,7 +142,7 @@ This is how it looks like:
     '0 3px 10px 0 rgba(0, 0, 0, 0.08)'
   ],
   borderRadius: {
-    'default': 6
+    default: '6px'
   }
 }
 ```
