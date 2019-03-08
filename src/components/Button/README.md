@@ -7,7 +7,7 @@ A button is a basic element that can represent an action in an application.
 ```jsx
 import { Button } from '@memed-dev/epiderme';
 
-const buttonExamples () => (
+const buttonExamples = () => (
   <div>
     <Button type="button">Default</Button>
     <Button color="primary">Primary</Button>
