@@ -1,7 +1,7 @@
 {
   "name": "@memed-dev/epiderme",
   "version": "0.0.0-development",
-  "description": "Toolkit de componentes React Memed",
+  "description": "Memed's component toolkit",
   "main": "dist/epiderme.umd.js",
   "module": "dist/epiderme.esm.js",
   "files": [
