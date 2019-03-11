@@ -143,7 +143,14 @@ This is how it looks like:
   ],
   borderRadius: {
     default: '6px'
-  }
+  },
+  icons: {
+    sizes: {
+      small: '16px',
+      medium: '24px',
+      large: '32px',
+    },
+  },
 }
 ```
 
