@@ -5,10 +5,10 @@ const Button = styled.button`
   vertical-align: middle;
   height: 32px;
   line-height: 32px;
-  padding: 0 ${({ theme }) => theme.unit.space2}px;
+  padding: 0 ${({ theme }) => theme.unit.space}px;
   outline: none;
   border: none;
-  border-radius: ${({ theme }) => theme.borderRadius.default}px;
+  border-radius: ${({ theme }) => theme.borderRadius.base};
   cursor: pointer;
   user-select: none;
   -webkit-tap-highlight-color: transparent;
