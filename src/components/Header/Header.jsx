@@ -18,9 +18,11 @@ const Header = (props) => {
   return (
     <StyledHeader {...attributes}>
 
-      <StyledHeader.ColumnLeft {...attributes}>
-        {thumbnail}
-      </StyledHeader.ColumnLeft>
+      {thumbnail && (
+        <StyledHeader.ColumnLeft {...attributes}>
+          {thumbnail}
+        </StyledHeader.ColumnLeft>
+      )}
 
       <StyledHeader.ColumnRight alignText={alignText} {...attributes}>
         <StyledHeader.Title className={dividerClass} dividerColor={dividerColor} {...attributes}>

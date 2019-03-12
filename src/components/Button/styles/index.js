@@ -50,7 +50,7 @@ const Button = styled.button`
   }
 
   & + & {
-    margin-left: ${({ theme }) => theme.unit.space2}px;
+    margin-left: ${({ theme }) => theme.unit.space}px;
   }
 `;
 

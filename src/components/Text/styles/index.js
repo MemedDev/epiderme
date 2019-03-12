@@ -1,6 +1,7 @@
 import styled, { css } from 'styled-components';
 
 const StyledText = styled.p`
+  margin: 0;
   text-align: ${props => props.align};
   font-family: ${({ theme }) => theme.typography.fontFamily};
   font-size: ${({ theme, scale }) => theme.typography[scale].fontSize};

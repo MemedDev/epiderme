@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import StyledIcon from './styles';
 
-const Icon = props => <StyledIcon {...props} />;
+const Icon = props => <StyledIcon {...props} aria-hidden="true" />;
 
 Icon.defaultProps = {
   size: 'medium',

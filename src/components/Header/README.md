@@ -18,17 +18,17 @@ Header may be oriented to give the importance of a section in the context of the
 ```javascript
 <Header
   thumb={
-    <MyAvatarComponent />
+    <Avatar />
   }
   title={
-    <Typography>
+    <Text>
       My Awesome title
-    </Typography>
+    </Text>
   }
   subtitle={
-    <Typography>
+    <Text>
       hooray!
-    </Typography>
+    </Text>
   }
   icon={
     <Icon name="arrow-right" />
@@ -40,9 +40,9 @@ Header may be oriented to give the importance of a section in the context of the
 ```javascript
 <Header
   title={
-    <Typography>
+    <Text>
       My Awesome title
-    </Typography>
+    </Text>
   }
   divider
   dividerColor="#20afd6"

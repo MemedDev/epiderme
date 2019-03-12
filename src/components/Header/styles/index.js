@@ -4,7 +4,7 @@ import ColumnRight from './columnRight';
 import ColumnLeft from './columnLeft';
 import Title from './title';
 
-const StyledHeader = styled.div`
+const StyledHeader = styled.header`
   display: flex;
   padding-top: 2px;
   box-orient: horizontal;

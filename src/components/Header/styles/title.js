@@ -1,8 +1,6 @@
 import styled from 'styled-components';
 
 const Title = styled.div`
-  margin-top: ${({ theme }) => theme.unit.extraSmall}px;
-
   &.withDivider {
     margin-bottom: ${({ theme }) => theme.unit.space}px;
     padding-bottom: ${({ theme }) => theme.unit.space}px;
