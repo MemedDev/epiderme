@@ -48,7 +48,7 @@
     "@storybook/addon-knobs": "4.1.13",
     "@storybook/addon-options": "^5.0.1",
     "@storybook/addons": "4.1.13",
-    "@storybook/react": "^4.1.13",
+    "@storybook/react": "^7.0.7",
     "@storybook/theming": "^5.0.0",
     "babel-eslint": "^10.0.1",
     "babel-jest": "^24.1.0",
